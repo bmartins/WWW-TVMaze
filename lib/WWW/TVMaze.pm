@@ -302,7 +302,7 @@ sub person_cast_credits {
 }
 
 
-sub person_crew_credit {
+sub person_crew_credits {
 	my ($self, $tvmaze_id, $embed) = @_;
 	return $self->_request('people/' . $tvmaze_id .'/crewcredits' . ( $embed ? '?embed=show' : '' ));
 }
