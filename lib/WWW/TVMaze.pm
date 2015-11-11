@@ -355,7 +355,7 @@ Bruno Martins, C<< <bscmartins at gmail.com> >>
 
 =head1 BUGS
 
-Please report any bugs or feature requests at L<http://github.com>
+Please report any bugs or feature requests at L<https://github.com/bmartins/WWW-TVMaze>
 
 
 

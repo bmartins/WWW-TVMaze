@@ -28,21 +28,6 @@ perldoc command.
 
     perldoc WWW::TVMaze
 
-You can also look for information at:
-
-    RT, CPAN's request tracker (report bugs here)
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=WWW-TVMaze
-
-    AnnoCPAN, Annotated CPAN documentation
-        http://annocpan.org/dist/WWW-TVMaze
-
-    CPAN Ratings
-        http://cpanratings.perl.org/d/WWW-TVMaze
-
-    Search CPAN
-        http://search.cpan.org/dist/WWW-TVMaze/
-
-
 LICENSE AND COPYRIGHT
 
 Copyright (C) 2015 Bruno Martins
