@@ -164,11 +164,13 @@ Returns a list of all the shows in the database with a timestamp of when they we
 
 
 =head2 error
+
 	my $error = $tv_maze->error();
 
 Returns the last error
 
 =head2 http_status
+
 	my $http_status = $tv_maze->http_status();
 
 Returns the last HTTP status received
