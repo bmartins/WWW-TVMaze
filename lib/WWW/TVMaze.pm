@@ -19,7 +19,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 has '_endpoint' => (
 	isa => 'Str',
