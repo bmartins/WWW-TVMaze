@@ -15,11 +15,11 @@ WWW::TVMaze - Interface to TVMaze API
 
 =head1 VERSION
 
-Version 0.04
+Version 0.05
 
 =cut
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 has '_endpoint' => (
 	isa => 'Str',
@@ -75,7 +75,7 @@ Returns a single show that match your search keyword
 
 =head2 show_lookup
 
-	my $show = $tv_maze->show_lookup( $id, $id_type ); # $id_type can be 'tvrage' or 'thetvdb'
+	my $show = $tv_maze->show_lookup( $id, $id_type ); # $id_type can be 'tvrage' or 'thetvdb' or 'imdb'
 
 Returns a show by its TVRage ID or by its THETVDB ID
 
@@ -209,7 +209,7 @@ sub show_single_search {
 sub show_lookup {
 	my ($self, $id, $id_type) = @_;
 	shift @_;
-	validate_pos (@_ , { type => SCALAR }, { type => SCALAR, regex => qr/^tvrage$|^thetvdb$/ } );
+	validate_pos (@_ , { type => SCALAR }, { type => SCALAR, regex => qr/^tvrage$|^thetvdb$|^imdb$/ } );
 	return $self->_request('lookup/shows?' . $id_type .'=' . $id);
 }
 

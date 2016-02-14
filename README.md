@@ -4,7 +4,7 @@ WWW::TVMaze - Interface to TVMaze API
 
 # VERSION
 
-Version 0.04
+Version 0.05
 
 # SYNOPSIS
 
@@ -38,7 +38,7 @@ Returns a single show that match your search keyword
 
 ## show_lookup
 
-        my $show = $tv_maze->show_lookup( $id, $id_type ); # $id_type can be 'tvrage' or 'thetvdb'
+        my $show = $tv_maze->show_lookup( $id, $id_type ); # $id_type can be 'tvrage' or 'thetvdb' or 'imdb'
 
 Returns a show by its TVRage ID or by its THETVDB ID
 
