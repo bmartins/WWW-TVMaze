@@ -15,7 +15,7 @@ WWW::TVMaze - Interface to TVMaze API
 
 =head1 VERSION
 
-Version 0.01
+Version 0.04
 
 =cut
 
