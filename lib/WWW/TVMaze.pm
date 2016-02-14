@@ -19,7 +19,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 has '_endpoint' => (
 	isa => 'Str',
@@ -79,9 +79,14 @@ Returns a single show that match your search keyword
 
 Returns a show by its TVRage ID or by its THETVDB ID
 
+=head2 show_seasons
+	my $seasons = $tv_maze->show_seasons($show_id);
+
+Returns all seasons of a show. Each season contains the number; the name (available for shows that give a title to each season, episode order (the total amount of episodes that will be released in the season); premiere and end date; network or web channel that specific season premiered on; and its image and summary.
+
 =head2 show_episode_list
 
-	my $ep_list = $self->show_episode_list($show_id, $include_specials); # $include_specials can be 0 or 1 and is optional;
+	my $ep_list = $tv_maze->show_episode_list($show_id, $include_specials); # $include_specials can be 0 or 1 and is optional;
 
 Returns a complete list of episodes for a given show. by defauls specials are not included
 
@@ -235,7 +240,12 @@ sub full_schedule {
 }
 
 
-
+sub show_seasons {
+	my ($self, $tvmaze_id) = @_;
+	shift @_;
+	validate_pos(@_, { type => SCALAR });
+	return $self->_request('shows/' . $tvmaze_id  .'/seasons');
+}
 
 sub show_episode_list {
 	my ($self, $tvmaze_id, $specials) = @_;
