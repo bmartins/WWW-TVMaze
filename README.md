@@ -43,7 +43,8 @@ Returns a single show that match your search keyword
 Returns a show by its TVRage ID or by its THETVDB ID
 
 ## show_seasons
-	my $seasons = $tv_maze->show_seasons($show_id);
+
+        my $seasons = $tv_maze->show_seasons($show_id);
 
 Returns all seasons of a show. Each season contains the number; the name (available for shows that give a title to each season, episode order (the total amount of episodes that will be released in the season); premiere and end date; network or web channel that specific season premiered on; and its image and summary.
 
