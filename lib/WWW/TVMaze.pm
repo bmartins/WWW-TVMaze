@@ -19,7 +19,7 @@ Version 0.05
 
 =cut
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 has '_endpoint' => (
 	isa => 'Str',
@@ -261,8 +261,8 @@ sub episode_by_number {
 	my ($self, $tvmaze_id, $season, $number) = @_;
 	shift @_;
 	validate_pos(@_, { type => SCALAR },  { type => SCALAR , optional => 1, regex => qr/^\d+$/ }, { type => SCALAR , optional => 1, regex => qr/^\d+$/ } );
-	$season |= 1;
-	$number |= 1;
+	$season ||= 1;
+	$number ||= 1;
 	return $self->_request('shows/' . $tvmaze_id . '/episodebynumber?season=' . $season .'&number=' . $number);
 }
 
